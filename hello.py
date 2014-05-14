@@ -12,7 +12,9 @@ def hello_world():
 def hello_projects():
     return render_template("projects.html")
 
-
+@app.route('/blog')
+def hello_blog():
+    return render_template("blog.html")
 
 if __name__ == '__main__':
     app.run(debug=True)
