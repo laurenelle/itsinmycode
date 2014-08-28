@@ -1,28 +1,29 @@
-<html>
-	<head>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-		<script src="{{ url_for('static', filename='jquery.vintageTxt.js') }}"></script>
-		<link rel="stylesheet" href="{{ url_for('static', filename='jquery.vintageTxt.css') }}">
-	</head>
-	<style>
-		{background-color:#81F7F3;}
-	</style>
-	<body>
-		<div id="vintageTyping">
-			<h1 style="font-family:HelveticaNeue-Thin;">It's in my code.</h1>
-			</br>
-			<h1 style="font-family:HelveticaNeue-Thin;"> A Work in Progress</h1>
-		</div>
-	</body>
-	<script>
-		$('#vintageTyping').vintageTxt({
-  		text: [$('#vintageTyping h1').text()], //add a selector to get text 
-  		textSpeed: 50, // One line per array element.
-  		linePause: 500, // The duration of the pause between each line (800ms)
-  		promptEnabled: false, // Show an input prompt underneath text
-  		onFinishedTyping: function() {
-    	$('#foo').delay(500).fadeOut(2000); // Callback for when all the text has been typed
-			}
-		});
-	</script>		
-</html>
+{% extends "layout.html" %}
+{% block head %}
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="{{ url_for('static', filename='jquery.vintageTxt.js') }}"></script>
+<link rel="stylesheet" href="{{ url_for('static', filename='jquery.vintageTxt.css') }}">
+
+<script>
+// execute after the page is loaded
+$( document ).ready(function() {
+  $('#vintageTyping').vintageTxt({
+      text: [$('#vintageTyping h1').text()], //add a selector to get text 
+      textSpeed: 50, // One line per array element.
+      linePause: 500, // The duration of the pause between each line (800ms)
+      promptEnabled: false, // Show an input prompt underneath text
+  });
+});
+</script> 
+
+<style>
+{background-color:#81F7F3;}
+</style>
+{% endblock %}
+{% block body %}
+<div id="vintageTyping">
+ <h1 style="font-family:HelveticaNeue-Thin;">testing</h1>
+</br>
+<h1 style="font-family:HelveticaNeue-Thin;"> 1,2,3</h1>
+</div>
+{% endblock %}
