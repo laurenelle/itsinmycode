@@ -9,10 +9,10 @@
 $( document ).ready(function() {
   $('#vintageTyping').vintageTxt({
       text: [$('#vintageTyping h1').text()], //add a selector to get text 
-      textSpeed: 50, // One line per array element.
+      textSpeed: 100, // One line per array element.
       linePause: 500, // The duration of the pause between each line (800ms)
       promptEnabled: false, // Show an input prompt underneath text
-  });
+    });
 });
 </script> 
 
@@ -22,8 +22,7 @@ $( document ).ready(function() {
 {% endblock %}
 {% block body %}
 <div id="vintageTyping">
- <h1 style="font-family:HelveticaNeue-Thin;">testing</h1>
-</br>
-<h1 style="font-family:HelveticaNeue-Thin;"> 1,2,3</h1>
+ <h1 style="font-family:HelveticaNeue-Thin;">Hi there! </h1>
+ <h1 style="font-family:HelveticaNeue-Thin;">I'm Lauren.</h1>
 </div>
 {% endblock %}
