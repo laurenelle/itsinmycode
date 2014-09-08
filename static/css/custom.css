@@ -1,0 +1,9 @@
+body {
+  background: #eee;
+  background-attachment: fixed;
+  background-image: url('/static/img/dusk.JPG');
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000;
+}
+
