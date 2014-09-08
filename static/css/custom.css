@@ -5,5 +5,39 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   color: #000;
+  font-family: "QuickSand";
 }
 
+.navbar-default {
+  background-color: #FAD3C5;
+  opacity: 0.8;
+  .transition(opacity 0.5s ease-in-out);
+  &:hover {
+    opacity: 1;
+  }
+  .navbar-nav > li > a {
+    color: #000;
+    opacity: 1;
+  }
+  .navbar-brand {
+    color: #000;
+    opacity: 1;
+  }
+  .navbar-toggle {
+    border-color: #000;
+    &:hover, &:focus {
+      background-color: #0066CC;
+    }
+    .icon-bar {
+      background-color: #000;
+    }
+  }
+}
+.navbar-brand {
+  color: #000;  
+}
+
+@font-face {
+  font-family: QuickSand;
+  src: url("/static/fonts/Quicksand-Regular.otf") format("opentype");
+}
