@@ -4,16 +4,25 @@
 <head>
   {% block head %}{% endblock %}        
   <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css">
-
+  <script src="/static/js/jquery-1.11.1.min.js"></script>
   <script src="http://css3-mediaqueries-js.googlecode.com/svn/trunk/css3-mediaqueries.js"></script>
   <script src="/static/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/static/css/custom.css" type="text/css">
+  <link rel="stylesheet" href="/static/css/custom.css" type="text/css">
 </head>
 
 <body>
   <nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="/">laurenturner</a>
+      </div>
+      <div class="collapse navbar-collapse">
         <ul class="nav navbar-nav">
           <li><a href="/about">ABOUT</a></li>
           <li><a href="/projects">PROJECTS</a></li>
@@ -23,8 +32,12 @@
     </div><!-- /.container-fluid -->
   </nav>
 </div>
-<div class="container">  
-  {% block body %}{% endblock %}
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-md-offset-3">  
+      {% block body %}{% endblock %}
+    </div>
+  </div>
 </div>
 </body>
 </html>
